@@ -1,4 +1,8 @@
-!pip3 install git+https://github.com/imdksjr/nuxhash
-!git clone https://github.com/imdksjr/nux_do_this.git
-!chmod 777 nux_do_this/squash2.py
-!./nux_do_this/squash2.py
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+from nuxhash import nuxhashd
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(nuxhashd())
